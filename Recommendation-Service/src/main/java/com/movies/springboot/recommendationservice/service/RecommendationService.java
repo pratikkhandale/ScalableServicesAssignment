@@ -26,4 +26,9 @@ public class RecommendationService {
 		return new ArrayList<>();
 	}
 
+	public List<Long> getRecommendedMoviesForUser(Long userId) {
+		// Placeholder for recommendation logic
+		return List.of(1L, 2L, 3L);  // Dummy movie IDs
+	}
+
 }

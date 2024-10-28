@@ -8,10 +8,10 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.movies.springboot.recommendationservice</groupId>
-	<artifactId>Recommendation-Service</artifactId>
+	<groupId>com.movies.springboot</groupId>
+	<artifactId>User-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Recommendation-Service</name>
+	<name>User-Service</name>
 	<description>Project for Movie Application</description>
 	<url/>
 	<licenses>
