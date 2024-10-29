@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "recommendations")
 public class Recommendation {
@@ -16,7 +18,8 @@ public class Recommendation {
 
 	private Long userId;
 	private Long movieId;
-	private String reason;// Reason for the recommendation (e.g genre, previous ratings)
+	private String genre;
+	private LocalDate recommendationDate;
 
 	public Long getId() {
 		return id;
@@ -42,11 +45,19 @@ public class Recommendation {
 		this.movieId = movieId;
 	}
 
-	public String getReason() {
-		return reason;
+	public String getGenre() {
+		return genre;
 	}
 
-	public void setReason(String reason) {
-		this.reason = reason;
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public LocalDate getRecommendationDate() {
+		return recommendationDate;
+	}
+
+	public void setRecommendationDate(LocalDate recommendationDate) {
+		this.recommendationDate = recommendationDate;
 	}
 }

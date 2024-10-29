@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "reviews")
 public class Review {
@@ -14,26 +16,18 @@ public class Review {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private Long movieId;
 	private Long userId;
-	private String content;
-	private int rating;
+	private Long movieId;
+	private int rating;  // rating out of 5
+	private String comment;
+	private LocalDate reviewDate;
 
-	// Getters and Setters
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Long getMovieId() {
-		return movieId;
-	}
-
-	public void setMovieId(Long movieId) {
-		this.movieId = movieId;
 	}
 
 	public Long getUserId() {
@@ -44,12 +38,12 @@ public class Review {
 		this.userId = userId;
 	}
 
-	public String getContent() {
-		return content;
+	public Long getMovieId() {
+		return movieId;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setMovieId(Long movieId) {
+		this.movieId = movieId;
 	}
 
 	public int getRating() {
@@ -58,6 +52,21 @@ public class Review {
 
 	public void setRating(int rating) {
 		this.rating = rating;
+	}
 
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public LocalDate getReviewDate() {
+		return reviewDate;
+	}
+
+	public void setReviewDate(LocalDate reviewDate) {
+		this.reviewDate = reviewDate;
 	}
 }
